@@ -7,9 +7,9 @@ public class StringVariable {
      * The result should show "Victor Yang"
      */
     public static void runStringVariableProblem(){
-        String firstName = Victor;
-        string lastName = "Yang";
+        String firstName = "Victor ";
+        String lastName = "Yang";
 
-        System.out.println(firstName plus lastName);
+        System.out.println(firstName +  lastName);
     }
 }
