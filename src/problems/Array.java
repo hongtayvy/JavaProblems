@@ -8,18 +8,19 @@ public class Array {
      * The total should print out 3.
      */
     public static void runArrayProblem(){
-        int[] numbers = [3];
+        int[] numbers = new int [3]; //this created 3 empty space
 
-        numbers.add(1);
-        numbers.add(1);
-        numbers.add(1);
+        numbers[0] = 2;
+        numbers[1] = 1;
+        numbers[2] = 2;
 
         int total = 0;
 
-        for(i < numbers.length; int i == 0; ++i){
-            total += numbers.get(i);
+        for(int i = 0; i < numbers.length; i++){
+            int valueOfPostion = numbers[i]; //array[position in the array]
+            total = total + valueOfPostion;
         }
 
-        System.out.println("Total is: " + total)
+        System.out.println("Total is: " + total);
     }
 }
