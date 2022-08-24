@@ -6,6 +6,7 @@ public class Grocery {
      * We want to swap these grocery items around.
      *
      * So we want Rice, Water, Chicken to switch to Water, Chicken, Rice
+     * do not use the forloop to just print out the changed positions
      */
     public static void runGroceryProblem(){
         String [] groceryList = {"Rice", "Water", "Chicken"};
