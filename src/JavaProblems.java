@@ -4,8 +4,8 @@ import static problems.StringVariable.runStringVariableProblem;
 
 public class JavaProblems {
     public static void main(String[] args){
-        runStringVariableProblem();
-        runArrayProblem();
+        //runStringVariableProblem();
+        //runArrayProblem();
         runGroceryProblem();
     }
 }
