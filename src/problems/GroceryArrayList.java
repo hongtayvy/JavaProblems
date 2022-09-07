@@ -13,9 +13,15 @@ public class GroceryArrayList {
     public static void runArrayListProblem() {
         List<String> groceryList = new ArrayList();
 
-        groceryList.set(2, "Rice");
-        groceryList.set(0,"Water");
-        groceryList.set(1,"Chicken");
+        groceryList.add("Rice");
+        groceryList.add("Water");
+        groceryList.add("Chicken");
+
+
+        String temp = groceryList.get(0);
+        groceryList.add(temp);
+        
+        groceryList.
 
         for(int i = 0; i < groceryList.size(); i++) {
             System.out.println(groceryList.get(i));
