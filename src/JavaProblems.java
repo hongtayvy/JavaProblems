@@ -5,7 +5,7 @@ public class JavaProblems {
     public static void main(String[] args){
         //runStringVariableProblem();
         //runArrayProblem();
-        runGroceryProblem();
+        //runGroceryProblem();
         runArrayListProblem();
     }
 }

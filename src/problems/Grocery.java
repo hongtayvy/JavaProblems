@@ -15,9 +15,9 @@ public class Grocery {
 
         groceryList[0] = groceryList[1];
         groceryList[1] = groceryList[2];
-        groceryList[2] = groceryList[0];
+        groceryList[2] = temp;
 
-        for (int i = 1; i < groceryList.length; i++) {
+        for (int i = 0; i < groceryList.length; i++) {
             System.out.println(groceryList[i]);
         }
 
