@@ -1,6 +1,6 @@
-package problems;
+package demo;
 
-public class StringVariable {
+public class StringDemo {
     /**
      * This method should print out the String variables.
      *

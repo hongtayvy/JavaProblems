@@ -1,6 +1,6 @@
-package problems;
+package demo;
 
-public class Array {
+public class ArrayDemo {
     /**
      * This method creates a simple array with 3 integers that are all 1.
      * From here, we go on and use a for loop to add the numbers in the array together.
