@@ -11,7 +11,7 @@ public class StringDemo {
         //2. We find the index of the comma. This will return an index of 5.
         int indexOfComma = helloWorld.indexOf(',');
 
-        //3. We chop up the string with using the method of substring and indexOfComma. This means we cut the word UP TO the comma not with the comma.
+        //3. We chop up the string with using the method of substring and indexOfComma. This means we create a new string UP TO the comma not with the comma.
         String hello = helloWorld.substring(indexOfComma);
 
         //Print result.
