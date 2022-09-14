@@ -12,7 +12,10 @@ public class StringDemo {
         int indexOfComma = helloWorld.indexOf(',');
 
         //3. We chop up the string with using the method of substring and indexOfComma. This means we create a new string UP TO the comma not with the comma.
-        String hello = helloWorld.substring(indexOfComma);
+        String hello = helloWorld.substring(0, indexOfComma);
+
+        //3a. This will cut from the comma to the end of the string which means this will be ", World"
+//        String hello = helloWorld.substring(indexOfComma);
 
         //Print result.
         System.out.println(hello);
