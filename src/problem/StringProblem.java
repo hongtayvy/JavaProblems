@@ -20,7 +20,7 @@ public class StringProblem {
      *      - Example:
      *              String helloWorld = "Hello World";
      *              int indexOfHello = helloWorld.indexOf("o");
-     *              String hello = helloWorld.substring(indexOfHello + 1); This will create a new string from the H to the first o which will get you "Hello"
+     *              String hello = helloWorld.substring(0, indexOfHello + 1); This will create a new string from the H to the first o which will get you "Hello"
      *              System.out.println(hello);
      * Some References:
      *  indexOf(...): https://www.w3schools.com/java/ref_string_indexof.asp
