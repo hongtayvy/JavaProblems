@@ -7,7 +7,7 @@ public class StringProblem {
      * Once you've split it, we'll just reprint out the name, and you should be able to get the same output.
      *
      * Problem Breakdown:
-     *  - Victor Yang will be store in a String variable called fullName.
+     *  - Victor Yang will be stored in a String variable called fullName.
      *  - You will then have two more String variables called firstName and lastName.
      *  - In firstName should be Victor
      *  - In lastName should be Yang
@@ -31,5 +31,16 @@ public class StringProblem {
 
     public static void runStringProblem(){
         //TODO: Write code here
+        String fullName = "Kokomi Sangonomiya";
+        //Mr/Mrs or Jr or Sr, names with a - ex:Jung Heo-Seok
+
+        int indexOfSeperation = fullName.indexOf(' ');
+        int indexOfSeperation2 = fullName.lastIndexOf(' ');
+
+        String firstName = fullName.substring(0, indexOfSeperation);
+        String lastName = fullName.substring(indexOfSeperation + 1);
+        System.out.println(firstName);
+        System.out.println(lastName);
+
     }
 }
