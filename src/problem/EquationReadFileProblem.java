@@ -5,9 +5,19 @@ import java.io.IOException;
 import static utils.BasicFileReader.readFile;
 
 public class EquationReadFileProblem {
-
+    /**
+     * We are going to build on the original equation problem we have. The big part of this we know
+     * is that your code works for the specific equation. Now we are going to generalize this code to
+     * handle more variations of this. This first iteration, we are going to focus on what happens
+     * to the data we read in from "data/equations.txt". Now I have already gone and written that part of the code
+     * since it's not what you're currently focusing on.
+     *
+     * We are going to read in the singular line from "data/equations.txt" from there I want you to now handle
+     * any issues that arise.
+     * @throws IOException
+     */
     public static void runEquationReadFileProblem() throws IOException {
-        String shawnsEquation = readFile("equation.txt");
+        String shawnsEquation = readFile("data/equation.txt");
 
         int leftHandOfOperation = shawnsEquation.indexOf(' ');
         int operator = shawnsEquation.indexOf('3');
