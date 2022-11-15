@@ -38,10 +38,10 @@ public class EquationProblem {
      */
 
     public static void runEquationProblem() {
-        String shawnsEquation = "2 + 3 = 5";
+        String shawnsEquation = "2 + 4 = 5";
 
         int leftHandOfOperation = shawnsEquation.indexOf(' ');
-        int operator = shawnsEquation.indexOf('3');
+        int operator = shawnsEquation.indexOf('4');
         int rightHandOfOperation = shawnsEquation.indexOf('=');
         int proposedAnswer = shawnsEquation.indexOf('5');
 
@@ -56,6 +56,8 @@ public class EquationProblem {
         System.out.println(modifiedSecondNumber);
         System.out.println(modifiedAnswer);
 
+
+        //for ( int i = 0; i <)
         //This takes the modified ints that were touched in the strings, so it's wrong.
         //System.out.println("this is the correct answer " + (leftHandOfOperation + rightHandOfOperation));
 
