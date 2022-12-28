@@ -39,6 +39,12 @@ public class EquationProblem {
 
     public static void runEquationProblem() {
         String shawnsEquation = "2 + 4 = 5";
+        String bonusEquation = "5 + 6 = 10";
+        String edward = "Edward";
+
+
+        int leftHandOfOperation2 = bonusEquation.indexOf(' ');
+        int operator2 = bonusEquation.indexOf('6');
 
         int leftHandOfOperation = shawnsEquation.indexOf(' ');
         int operator = shawnsEquation.indexOf('4');
@@ -50,16 +56,16 @@ public class EquationProblem {
         String modifiedSecondNumber = shawnsEquation.substring(operator, rightHandOfOperation - 1);
         String modifiedAnswer = shawnsEquation.substring(rightHandOfOperation + 2, proposedAnswer + 1);
 
+        String modifiedFirstNumber2 = bonusEquation.substring(0, leftHandOfOperation2);
+        String modifiedEdward = edward.substring(1, 6);
+
+        System.out.println(modifiedEdward);
+
 
         System.out.println(modifiedFirstNumber);
         System.out.println(modifiedOperator);
         System.out.println(modifiedSecondNumber);
         System.out.println(modifiedAnswer);
-
-
-        //for ( int i = 0; i <)
-        //This takes the modified ints that were touched in the strings, so it's wrong.
-        //System.out.println("this is the correct answer " + (leftHandOfOperation + rightHandOfOperation));
 
         int answer = (Integer.parseInt(modifiedFirstNumber) + Integer.parseInt(modifiedSecondNumber));
         if (answer == Integer.parseInt(modifiedAnswer)) {
