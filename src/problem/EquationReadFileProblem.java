@@ -44,7 +44,8 @@ public class EquationReadFileProblem {
         //This takes the modified ints that were touched in the strings, so it's wrong.
         //System.out.println("this is the correct answer " + (leftHandOfOperation + rightHandOfOperation));
 
-        int answer = (Integer.parseInt(modifiedFirstNumber) + Integer.parseInt(modifiedSecondNumber));
+        //is the following(48) now correct? does 49 need to be changed as well? -S
+        int answer = (leftHandOfOperation + rightHandOfOperation);
         if (answer == Integer.parseInt(modifiedAnswer)) {
             System.out.println("You have correctly answered the question, congratz.");
         } else {
@@ -66,7 +67,9 @@ public class EquationReadFileProblem {
      * @param equationData
      * @return
      */
+    //does just taking in "equationData" into "constructData" create lines 62- 64? or do we have to tell it to construct the data like that manually? -S
     private static String[] constructData(String equationData){
         return null;
     }
+
 }
