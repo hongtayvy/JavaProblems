@@ -17,8 +17,8 @@ public class ArrayDemo {
         int total = 0;
 
         for(int i = 0; i < numbers.length; i++){
-            int valueOfPostion = numbers[i]; //array[position in the array]
-            total = total + valueOfPostion;
+            int valueOfPosition = numbers[i]; //array[position in the array]
+            total = total + valueOfPosition;
         }
 
         System.out.println("Total is: " + total);
