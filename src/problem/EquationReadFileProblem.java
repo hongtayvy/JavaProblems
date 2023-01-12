@@ -1,5 +1,7 @@
 package problem;
 
+import utils.BasicFileReader;
+
 import java.io.IOException;
 
 import static utils.BasicFileReader.readFile;
@@ -23,7 +25,14 @@ public class EquationReadFileProblem {
      * @throws IOException
      */
     public static void runEquationReadFileProblem() throws IOException {
-        String shawnsEquation = readFile("src/data/equation.txt");
+        //This now assigns the file to "shawnsEquation"
+        String shawnsEquation = BasicFileReader.readFile("src/data/equation.txt");
+        //This now uses the method and carries "shawnsEquation" with it to said method
+        constructData(shawnsEquation);
+        //This now prints "shawnsEquation" as it has been assigned in the above line using the above method.
+        System.out.println(shawnsEquation);
+
+
 
         int leftHandOfOperation = shawnsEquation.indexOf(' ');
         int operator = shawnsEquation.indexOf('3');
@@ -41,8 +50,6 @@ public class EquationReadFileProblem {
         System.out.println(modifiedSecondNumber);
         System.out.println(modifiedAnswer);
 
-        //This takes the modified ints that were touched in the strings, so it's wrong.
-        //System.out.println("this is the correct answer " + (leftHandOfOperation + rightHandOfOperation));
 
         //is the following(48) now correct? does 49 need to be changed as well? -S
         int answer = (leftHandOfOperation + rightHandOfOperation);
@@ -67,9 +74,20 @@ public class EquationReadFileProblem {
      * @param equationData
      * @return
      */
-    //does just taking in "equationData" into "constructData" create lines 62- 64? or do we have to tell it to construct the data like that manually? -S
+
     private static String[] constructData(String equationData){
-        return null;
+        //This gives us a container to open "equationData" inside of.
+        String [] shawnsBrain = new String[3];
+        //1. equation data is the data
+        //2. we see the data structure we need from the return type in the method header
+            String modifiedData = new String(equationData);
+        //3. we need to organize the data structure
+        //This does the opening of "equationData" inside the above container and finally returns
+        for(int i = 0; i < shawnsBrain.length; i++ ) {
+            //System.out.println(shawnsBrain[i]);
+        }
+        //4. return the data structure
+        return shawnsBrain;
     }
 
 }
