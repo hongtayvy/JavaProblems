@@ -1,5 +1,6 @@
 package problem;
 
+import org.w3c.dom.ls.LSOutput;
 import utils.BasicFileReader;
 
 import java.io.IOException;
@@ -25,11 +26,9 @@ public class EquationReadFileProblem {
      * @throws IOException
      */
     public static void runEquationReadFileProblem() throws IOException {
-        //This now assigns the file to "shawnsEquation"
         String shawnsEquation = BasicFileReader.readFile("src/data/equation.txt");
-        //This now uses the method and carries "shawnsEquation" with it to said method
         constructData(shawnsEquation);
-        //This now prints "shawnsEquation" as it has been assigned in the above line using the above method.
+        System.out.println("test line");
         System.out.println(shawnsEquation);
 
 
@@ -51,7 +50,6 @@ public class EquationReadFileProblem {
         System.out.println(modifiedAnswer);
 
 
-        //is the following(48) now correct? does 49 need to be changed as well? -S
         int answer = (leftHandOfOperation + rightHandOfOperation);
         if (answer == Integer.parseInt(modifiedAnswer)) {
             System.out.println("You have correctly answered the question, congratz.");
@@ -76,18 +74,32 @@ public class EquationReadFileProblem {
      */
 
     private static String[] constructData(String equationData){
-        //This gives us a container to open "equationData" inside of.
-        String [] shawnsBrain = new String[3];
-        //1. equation data is the data
-        //2. we see the data structure we need from the return type in the method header
-            String modifiedData = new String(equationData);
-        //3. we need to organize the data structure
-        //This does the opening of "equationData" inside the above container and finally returns
-        for(int i = 0; i < shawnsBrain.length; i++ ) {
-            //System.out.println(shawnsBrain[i]);
+
+        int endFirstEquation = equationData.indexOf("\n");
+        int endSecondEquation = equationData.lastIndexOf("\n");
+
+
+        String firstEquationFull = equationData.substring(0, endFirstEquation);
+        String secondEquationFull = equationData.substring(endFirstEquation, endSecondEquation);
+        String thirdEquationFull = equationData.substring(endSecondEquation);
+
+
+        String [] shawnsArray = new String[3];
+
+        for(int i = 0; i < shawnsArray.length; i++ ) {
+            switch (i) {
+                case 0:
+                    shawnsArray[i] = firstEquationFull;
+                    break;
+                case 1:
+                    shawnsArray[i] = secondEquationFull;
+                    break;
+                case 2:
+                    shawnsArray[i] = thirdEquationFull;
+                    break;
+            }
         }
-        //4. return the data structure
-        return shawnsBrain;
+    return shawnsArray;
     }
 
 }
