@@ -4,6 +4,8 @@ import org.w3c.dom.ls.LSOutput;
 import utils.BasicFileReader;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import static utils.BasicFileReader.readFile;
 
@@ -27,35 +29,9 @@ public class EquationReadFileProblem {
      */
     public static void runEquationReadFileProblem() throws IOException {
         String shawnsEquation = BasicFileReader.readFile("src/data/equation.txt");
-        constructData(shawnsEquation);
-        System.out.println("test line");
+        String[] cleanData = constructData(shawnsEquation);
+        checkData(cleanData);
         System.out.println(shawnsEquation);
-
-
-
-        int leftHandOfOperation = shawnsEquation.indexOf(' ');
-        int operator = shawnsEquation.indexOf('3');
-        int rightHandOfOperation = shawnsEquation.indexOf('=');
-        int proposedAnswer = shawnsEquation.indexOf('5');
-
-        String modifiedFirstNumber = shawnsEquation.substring(0, leftHandOfOperation);
-        String modifiedOperator = shawnsEquation.substring(leftHandOfOperation + 1, operator - 1);
-        String modifiedSecondNumber = shawnsEquation.substring(operator, rightHandOfOperation - 1);
-        String modifiedAnswer = shawnsEquation.substring(rightHandOfOperation + 2, proposedAnswer + 1);
-
-
-        System.out.println(modifiedFirstNumber);
-        System.out.println(modifiedOperator);
-        System.out.println(modifiedSecondNumber);
-        System.out.println(modifiedAnswer);
-
-
-        int answer = (leftHandOfOperation + rightHandOfOperation);
-        if (answer == Integer.parseInt(modifiedAnswer)) {
-            System.out.println("You have correctly answered the question, congratz.");
-        } else {
-            System.out.println("You have incorrectly answered, try again");
-        }
     }
 
     /**
@@ -69,9 +45,44 @@ public class EquationReadFileProblem {
      * System.out.println(equationArray[1]); //This would be "2. 1 + 2 = 2"
      *
      * Now I will state you could break down how you want to use the data anyway, but this is a guideline for the idea of constructing data.
-     * @param equationData
+     * @paramequationData
      * @return
      */
+
+    private static void checkData(String[] cleanData) {
+
+
+
+        for (int i = 0; i < cleanData.length; i++) {
+            System.out.println(cleanData[i]);
+
+
+            int leftHandOfOperation = cleanData[i].indexOf(' ');
+            int operator = cleanData[i].indexOf('+');
+            int rightHandOfOperation = cleanData[i].indexOf('=');
+            int proposedAnswer = cleanData[i].indexOf('=' + 1);
+
+            System.out.println(leftHandOfOperation);
+            System.out.println(operator);
+            System.out.println(rightHandOfOperation);
+            System.out.println(proposedAnswer);
+
+            String modifiedFirstNumber = cleanData[i].substring(leftHandOfOperation + 1, operator);
+            String modifiedOperator = cleanData[i].substring(operator, operator + 1);
+            String modifiedSecondNumber = cleanData[i].substring(operator + 2, rightHandOfOperation);
+            String modifiedAnswer = cleanData[i].substring(rightHandOfOperation + 2, proposedAnswer);
+
+
+            String answer = String.valueOf(Integer.parseInt(modifiedFirstNumber.trim()) + Integer.parseInt(modifiedSecondNumber.trim()));
+            System.out.println(answer);
+
+            if (answer.equals(modifiedAnswer.trim())) {
+                System.out.println("You have correctly answered the question, congratz.");
+            } else {
+                System.out.println("You have incorrectly answered, try again");
+            }
+        }
+    }
 
     private static String[] constructData(String equationData){
 
