@@ -52,15 +52,14 @@ public class EquationReadFileProblem {
     private static void checkData(String[] cleanData) {
 
 
-
         for (int i = 0; i < cleanData.length; i++) {
-            System.out.println(cleanData[i]);
+            System.out.println(cleanData[i] + " is at index " + i);
 
 
             int leftHandOfOperation = cleanData[i].indexOf(' ');
             int operator = cleanData[i].indexOf('+');
             int rightHandOfOperation = cleanData[i].indexOf('=');
-            int proposedAnswer = cleanData[i].indexOf('=' + 1);
+            int proposedAnswer = cleanData[i].lastIndexOf(' ');
 
             System.out.println(leftHandOfOperation);
             System.out.println(operator);
@@ -70,11 +69,11 @@ public class EquationReadFileProblem {
             String modifiedFirstNumber = cleanData[i].substring(leftHandOfOperation + 1, operator);
             String modifiedOperator = cleanData[i].substring(operator, operator + 1);
             String modifiedSecondNumber = cleanData[i].substring(operator + 2, rightHandOfOperation);
-            String modifiedAnswer = cleanData[i].substring(rightHandOfOperation + 2, proposedAnswer);
+            String modifiedAnswer = cleanData[i].substring(rightHandOfOperation + 2, proposedAnswer + 2);
 
 
             String answer = String.valueOf(Integer.parseInt(modifiedFirstNumber.trim()) + Integer.parseInt(modifiedSecondNumber.trim()));
-            System.out.println(answer);
+            //System.out.println(answer);
 
             if (answer.equals(modifiedAnswer.trim())) {
                 System.out.println("You have correctly answered the question, congratz.");
