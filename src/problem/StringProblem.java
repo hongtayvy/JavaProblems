@@ -31,15 +31,17 @@ public class StringProblem {
 
     public static void runStringProblem(){
         //TODO: Write code here
-        String fullName = "Kokomi Sangonomiya";
+        String fullName = "Kokomi A Sangonomiya";
         //Mr/Mrs or Jr or Sr, names with a - ex:Jung Heo-Seok
 
         int indexOfSeperation = fullName.indexOf(' ');
-        int indexOfSeperation2 = fullName.lastIndexOf(' ');
+        int indexOfSeperation2 = fullName.indexOf('A');
 
         String firstName = fullName.substring(0, indexOfSeperation);
-        String lastName = fullName.substring(indexOfSeperation + 1);
+        String middleName = fullName.substring(indexOfSeperation + 1 , indexOfSeperation2);
+        String lastName = fullName.substring(indexOfSeperation2 + 1);
         System.out.println(firstName);
+        System.out.println(middleName);
         System.out.println(lastName);
 
     }
