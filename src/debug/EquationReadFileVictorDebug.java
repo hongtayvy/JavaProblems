@@ -37,7 +37,7 @@ public class EquationReadFileVictorDebug {
     }
 
     public static void runEquationReadFileVictorDebug() throws IOException {
-        String equationData = BasicFileReader.readFile("src/data/eqaution.txt");
+        String equationData = BasicFileReader.readFile("src/data/eqaution2.txt");
         String[] cleanEquationData = constructData(equationData);
         for (int i = 0; i < cleanEquationData.length + 1; i++) {
             verifyEquation(cleanEquationData[i]);
