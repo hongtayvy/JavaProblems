@@ -1,12 +1,12 @@
-import problem.EquationReadFileProblem;
-import problem.StringProblem;
-
 import java.io.IOException;
 
-import static demo.StoreDataDemo.runStoreDataDemo;
+import static debug.EquationReadFileVictorDebug.runEquationReadFileVictorDebug;
+import static victorSolutions.EquationReadFileVictorSolution.runEquationReadFileVictorSolution;
+
 
 public class JavaProblems {
     public static void main(String[] args) throws IOException {
-        EquationReadFileProblem.runEquationReadFileProblem();
+//        runEquationReadFileVictorSolution();
+        runEquationReadFileVictorDebug();
     }
 }
