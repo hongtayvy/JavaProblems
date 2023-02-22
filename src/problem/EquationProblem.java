@@ -68,7 +68,7 @@ public class EquationProblem {
         String modifiedEdward = edward.substring(1, 6);
 
         System.out.println(modifiedEdward);
-        
+
         System.out.println(modifiedFirstNumber);
         System.out.println(modifiedOperator);
         System.out.println(modifiedSecondNumber);
