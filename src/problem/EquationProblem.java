@@ -1,8 +1,5 @@
 package problem;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class EquationProblem {
     /**
      * We are going to build on what we know so far. This problem will be taking in an equation.
@@ -42,18 +39,17 @@ public class EquationProblem {
 
     public static void runEquationProblem() {
         String shawnsEquation = "2 + 4 = 5";
-        String bonusEquation = "5 + 6 = 11";
+        String bonusEquation = "5 + 6 = 10";
         String edward = "Edward";
+
+
+        int leftHandOfOperation2 = bonusEquation.indexOf(' ');
+        int operator2 = bonusEquation.indexOf('6');
 
         int leftHandOfOperation = shawnsEquation.indexOf(' ');
         int operator = shawnsEquation.indexOf('4');
         int rightHandOfOperation = shawnsEquation.indexOf('=');
         int proposedAnswer = shawnsEquation.indexOf('5');
-
-        int leftHandOfOperation2 = bonusEquation.indexOf(' ');
-        int operator2 = bonusEquation.indexOf('6');
-        int rightHandOfOperation2 = bonusEquation.indexOf('=');
-        int proposedAnswer2 = bonusEquation.indexOf('1');
 
         String modifiedFirstNumber = shawnsEquation.substring(0, leftHandOfOperation);
         String modifiedOperator = shawnsEquation.substring(leftHandOfOperation + 1, operator - 1);
@@ -61,13 +57,10 @@ public class EquationProblem {
         String modifiedAnswer = shawnsEquation.substring(rightHandOfOperation + 2, proposedAnswer + 1);
 
         String modifiedFirstNumber2 = bonusEquation.substring(0, leftHandOfOperation2);
-        String modifiedOperator2 = bonusEquation.substring(leftHandOfOperation + 1, operator - 1);
-        String modifiedSecondNumber2 = bonusEquation.substring(operator, rightHandOfOperation - 1);
-        String modifiedAnswer2 = bonusEquation.substring(rightHandOfOperation + 2, proposedAnswer + 2);
-
         String modifiedEdward = edward.substring(1, 6);
 
         System.out.println(modifiedEdward);
+
 
         System.out.println(modifiedFirstNumber);
         System.out.println(modifiedOperator);
@@ -75,17 +68,10 @@ public class EquationProblem {
         System.out.println(modifiedAnswer);
 
         int answer = (Integer.parseInt(modifiedFirstNumber) + Integer.parseInt(modifiedSecondNumber));
-        int answer2 = (Integer.parseInt(modifiedFirstNumber2) + Integer.parseInt(modifiedSecondNumber2));
-
         if (answer == Integer.parseInt(modifiedAnswer)) {
             System.out.println("You have correctly answered the question, congratz.");
         } else {
-            System.out.println("You have incorrectly answered. The correct answer is " + answer);
-        }
-        if (answer2 == Integer.parseInt(modifiedAnswer2)) {
-            System.out.println("You have correctly answered the question, congratz.");
-        } else {
-            System.out.println("You have incorrectly answered. The correct answer is " + answer2);
+            System.out.println("You have incorrectly answered, try again");
         }
     }
 }

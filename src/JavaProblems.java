@@ -11,6 +11,7 @@ import static victorSolutions.EquationReadFileVictorSolution.runEquationReadFile
 
 public class JavaProblems {
     public static void main(String[] args) throws IOException {
-        runEquationReadFileVictorDebug();
+        //runEquationReadFileVictorDebug();
+        EquationProblem.runEquationProblem();
     }
 }
