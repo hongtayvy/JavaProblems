@@ -1,4 +1,4 @@
-package demo.grocerydemo;
+package basics.demo.grocerydemo;
 
 import java.util.ArrayList;
 import java.util.List;

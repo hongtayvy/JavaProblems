@@ -1,4 +1,4 @@
-package debug;
+package basics.debug;
 
 import utils.BasicFileReader;
 

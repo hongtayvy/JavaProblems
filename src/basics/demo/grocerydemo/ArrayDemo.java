@@ -1,4 +1,4 @@
-package demo.grocerydemo;
+package basics.demo.grocerydemo;
 
 public class ArrayDemo {
 
