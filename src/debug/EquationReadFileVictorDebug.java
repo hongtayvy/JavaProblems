@@ -16,7 +16,7 @@ public class EquationReadFileVictorDebug {
 
         cleanEquationData[0] = firstEquationFull;
         cleanEquationData[1] = secondEquationFull;
-        cleanEquationData[3] = thirdEquationFull;
+        cleanEquationData[2] = thirdEquationFull;
 
         return cleanEquationData;
     }
@@ -26,22 +26,34 @@ public class EquationReadFileVictorDebug {
 
         String leftPartOfEquation = cleanEquationData.substring(0, indexOfOperator - 1);
         String rightPartOfEquation = cleanEquationData.substring(indexOfOperator + 2, indexOfEquals - 1);
-        String answerOfEquation = cleanEquationData.substring(indexOfEquals + 2);
+        String answerOfEquation = cleanEquationData.substring(indexOfEquals + 2, indexOfEquals + 3);
 
         int actualAnswer = Integer.parseInt(leftPartOfEquation) + Integer.parseInt(rightPartOfEquation);
         if (actualAnswer == Integer.parseInt(answerOfEquation)) {
-            System.out.println("The equation " + cleanEquationData + " is correct.");
+            System.out.println("The equation " + cleanEquationData.trim() + " is correct.");
         } else {
             System.out.println("The equation " + cleanEquationData + " is incorrect. The answer should be " + actualAnswer + ".");
         }
     }
 
     public static void runEquationReadFileVictorDebug() throws IOException {
-        String equationData = BasicFileReader.readFile("src/data/eqaution2.txt");
+        String equationData = BasicFileReader.readFile("src/data/equation2.txt");
         String[] cleanEquationData = constructData(equationData);
-        for (int i = 0; i < cleanEquationData.length + 1; i++) {
+        for (int i = 0; i < cleanEquationData.length; i++) {
             verifyEquation(cleanEquationData[i]);
         }
     }
-
 }
+
+    /* Exception in thread "main" java.nio.file.NoSuchFileException: src\data\equation2.txt >>>>>>
+        <<<<< improper file name assignment
+
+        at debug.EquationReadFileVictorDebug.constructData(EquationReadFileVictorDebug.java:19) >>>>>>
+        <<<<< invalid array assignment
+
+        debug.EquationReadFileVictorDebug.runEquationReadFileVictorDebug(EquationReadFileVictorDebug.java:43)>>>>>
+        <<<<< incorrect starting position for loop given parameters of said loop
+
+            System.out.println("The equation " + cleanEquationData + " is correct.");>>>>>
+            <<<<< first half of equation is cut and is only read with '.trim' added to cleanEquationData due to return already installed on cleanEquationData?
+     */
