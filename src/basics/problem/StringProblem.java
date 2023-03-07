@@ -1,9 +1,9 @@
-package problem;
+package basics.problem;
 
 public class StringProblem {
     /**
      * We are going to build research skills along with some good String methods that you should know.
-     * The problem is that we are going to take a full name and split it into two pieces firstName and lastName.
+     * The basics.problem is that we are going to take a full name and split it into two pieces firstName and lastName.
      * Once you've split it, we'll just reprint out the name, and you should be able to get the same output.
      *
      * Problem Breakdown:

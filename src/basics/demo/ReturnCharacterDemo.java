@@ -1,4 +1,4 @@
-package demo;
+package basics.demo;
 
 public class ReturnCharacterDemo {
 
