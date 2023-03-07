@@ -71,7 +71,7 @@ public class EquationProblem {
         if (answer == Integer.parseInt(modifiedAnswer)) {
             System.out.println("You have correctly answered the question, congratz.");
         } else {
-                System.out.println("You have incorrectly answered, try again");
+            System.out.println("You have incorrectly answered, try again");
         }
     }
 }
