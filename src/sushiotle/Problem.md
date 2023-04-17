@@ -11,8 +11,8 @@ the project structure, classes, methods, and objects.
 1. An individual should be able to order the following:
     - A single / multiple roll(s) or bowl(s) (must choose)
     - 0 to 2 types of protein (does not need to choose)
-    - 0 to 10 types of fillings / toppings (does not need to choose)
+    - 0 to 10 types of orderItems / toppings (does not need to choose)
     - 0 to 3 types of sauces / (does not need to choose)
 2. Each item should have their own price
-    - i.e. a single roll with 1 protein, 3 fillings, and 1 sauce could be different from a bowl with selected options.
+    - i.e. a single roll with 1 protein, 3 orderItems, and 1 sauce could be different from a bowl with selected options.
 3. Once you've created their order, you must calculate their total and print it out.
