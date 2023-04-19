@@ -7,6 +7,10 @@ public class OrderType {
     private String greeting;
     private String menuDesignation;
 
+    public OrderType() {
+
+    }
+
     public String getGreeting() { return greeting; }
     public void setGreeting(String greeting) { this.greeting = greeting; }
 

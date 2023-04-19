@@ -3,9 +3,11 @@ package sushiotle;
 public class OrderProtein {
 
     private String name;
-    private double price;
+    private double priceofProtein;
     private String greeting;
 
+    public OrderProtein() {
+    }
     public String getGreeting() { return greeting; }
     public void setGreeting(String greeting) { this.greeting = greeting; }
 
@@ -17,21 +19,21 @@ public class OrderProtein {
         this.name = name;
     }
 
-    public double getPrice() {return price; }
-    public void setPrice(double price) {
-        this.price = price;
+    public double getPriceofProtein() {return priceofProtein; }
+    public void setPriceofProtein(double priceofProtein) {
+        this.priceofProtein = priceofProtein;
     }
 
     public OrderProtein(double price, String name, String greeting) {
         this.name = name;
-        this.price = price;
+        this.priceofProtein = price;
         this.greeting = greeting;
     }
 
 
     @Override
     public String toString() {
-        return  name + " priced at $" + price;
+        return  name + " priced at $" + priceofProtein;
     }
 
 }
