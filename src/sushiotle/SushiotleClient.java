@@ -108,21 +108,34 @@ public class SushiotleClient {
         Scanner stdin = new Scanner(System.in);
         String input = "";
 
-        List<String> availableFillings = new ArrayList(12);
-        List<String> customersSelectedFillings = new ArrayList<>(10);
+        List<OrderFillings> availableFillings = new ArrayList(12);
+        List<OrderFillings> customersSelectedFillings = new ArrayList<>(10);
 
-        availableFillings.add("1. Avocado");
-        availableFillings.add("2. Cucumber");
-        availableFillings.add("3. Red cabbage");
-        availableFillings.add("4. Corn");
-        availableFillings.add("5. Lettuce");
-        availableFillings.add("6. Carrots");
-        availableFillings.add("7. Daikon");
-        availableFillings.add("8. Tamago");
-        availableFillings.add("9. Salmon Roe");
-        availableFillings.add("10. Sesame Seeds");
-        availableFillings.add("11. Bonito Flakes");
-        availableFillings.add("12. Jalapenos");
+        OrderFillings avocado = new OrderFillings("1. Avocado", 1.99);
+        OrderFillings cucumber = new OrderFillings("2. Cucumber", 0.99);
+        OrderFillings redCabbage = new OrderFillings("3. Red Cabbage", 0.99);
+        OrderFillings corn = new OrderFillings("4. Corn", 0.99);
+        OrderFillings lettuce = new OrderFillings("5. Lettuce", 0.00);
+        OrderFillings carrots = new OrderFillings("6. Carrots", 0.99);
+        OrderFillings daikon = new OrderFillings("7. Daikon", 1.49);
+        OrderFillings tamago = new OrderFillings("8. Tamago", 1.99);
+        OrderFillings salmonRoe = new OrderFillings("9. Salmon Roe", 1.99);
+        OrderFillings sesameSeeds = new OrderFillings("10. Sesame Seeds", 0.00);
+        OrderFillings bonitoFlakes = new OrderFillings("11. Bonito Flakes", 0.99);
+        OrderFillings jalapenos = new OrderFillings("12. Jalapenos", 0.99);
+
+        availableFillings.add(avocado);
+        availableFillings.add(cucumber);
+        availableFillings.add(redCabbage);
+        availableFillings.add(corn);
+        availableFillings.add(lettuce);
+        availableFillings.add(carrots);
+        availableFillings.add(daikon);
+        availableFillings.add(tamago);
+        availableFillings.add(salmonRoe);
+        availableFillings.add(sesameSeeds);
+        availableFillings.add(bonitoFlakes);
+        availableFillings.add(jalapenos);
 
         boolean addFillingFlag = true;
 
@@ -134,9 +147,12 @@ public class SushiotleClient {
             }
             input = stdin.nextLine();
             customersSelectedFillings.add(availableFillings.get(Integer.parseInt(input) - 1));
+            if(input.equals("1") || input.equals("8") || input.equals("9")) {
+                System.out.println("You've selected a premium topping(+1.99)");
+            }
 
             for(int i = 0; i < customersSelectedFillings.size(); i++){
-                System.out.println(" Your sushi currently holds " + customersSelectedFillings.get(i));
+                System.out.println("Your sushi currently holds " + customersSelectedFillings.get(i));
             }
 
             if(customersSelectedFillings.size() == 10 ) {

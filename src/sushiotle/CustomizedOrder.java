@@ -6,6 +6,7 @@ public class CustomizedOrder {
 
     private OrderType orderType;
     private OrderProtein orderProtein;
+    private OrderFillings orderFillings;
     private List fillings;
 
 
@@ -14,9 +15,10 @@ public class CustomizedOrder {
     public CustomizedOrder() {
     }
 
-    public CustomizedOrder(OrderType orderType, OrderProtein orderProtein) {
+    public CustomizedOrder(OrderType orderType, OrderProtein orderProtein, OrderFillings orderFillings) {
         this.orderType = orderType;
         this.orderProtein = orderProtein;
+        this.orderFillings = orderFillings;
     }
 
 
@@ -53,6 +55,6 @@ public class CustomizedOrder {
     }
 
     public double calculateTotal() {
-        return orderType.getPriceOfType() + orderProtein.getPriceofProtein();
+        return orderType.getPriceOfType() + orderProtein.getPriceofProtein() + orderFillings.getFillingPrice();
     }
 }
