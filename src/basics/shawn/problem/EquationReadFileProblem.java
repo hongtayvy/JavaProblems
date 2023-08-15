@@ -1,4 +1,4 @@
-package basics.problem;
+package basics.shawn.problem;
 
 import utils.BasicFileReader;
 
@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class EquationReadFileProblem {
     /**
-     * We are going to build on the original equation basics.problem we have. The big part of this we know
+     * We are going to build on the original equation basics.shawn.problem we have. The big part of this we know
      * is that your code works for the specific equation. Now we are going to generalize this code to
      * handle more variations of this. This first iteration, we are going to focus on what happens
      * to the data we read in from "src/data/equations.txt". Now I have already gone and written that part of the code
@@ -17,7 +17,7 @@ public class EquationReadFileProblem {
      *  - How do we make sure that a line from equation is a valid set of data
      *
      * For now, we are going to handle the reading from "src/data/equations.txt":
-     *  - We want to construct the data for the basics.problem. What this means is that we want to take the text in from "src/data/equations.txt"
+     *  - We want to construct the data for the basics.shawn.problem. What this means is that we want to take the text in from "src/data/equations.txt"
      *    and we want to standardize how the data is formatted for code’s sake at least. This means we are going to use the constructData
      *    method to standardize data we read in.
      * @throws IOException

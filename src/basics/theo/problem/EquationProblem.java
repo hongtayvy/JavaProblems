@@ -1,8 +1,8 @@
-package basics.problem;
+package basics.theo.problem;
 
 public class EquationProblem {
     /**
-     * We are going to build on what we know so far. This basics.problem will be taking in an equation.
+     * We are going to build on what we know so far. This basics.shawn.problem will be taking in an equation.
      * From here, we will decipher what the equation is trying to do, and we will solve the equation.
      * The following requirements:
      * 1. Be able to split the string into 4 smaller strings. You must split the strings via indexOfs and substrings methods only.
@@ -17,8 +17,8 @@ public class EquationProblem {
      * - This will hold their suspected answer
      * 2. Once you have the values split up, you will preform the equation they proposed.
      * 3. Once you have the answer, you will compare the answer to their answer and see if it's correct.
-     * 3a. If the basics.problem is correct, you will print out the message that the equation is correct.
-     * 3b. If the basics.problem is incorrect, you will let them know that their equation is incorrect, and
+     * 3a. If the basics.shawn.problem is correct, you will print out the message that the equation is correct.
+     * 3b. If the basics.shawn.problem is incorrect, you will let them know that their equation is incorrect, and
      * you will print show them the proper solution to their proposed equation.
      * For example:
      * Equation: 1 + 2 = 4
