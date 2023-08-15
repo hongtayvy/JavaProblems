@@ -6,7 +6,7 @@ public class StringDemo {
      */
     public static void runStringDemo(){
         //1. This is the base string.
-        String helloWorld = "Hello, World";
+        String helloWorld = "Hello,  World";
 
         //2. We find the index of the comma. This will return an index of 5.
         int indexOfComma = helloWorld.indexOf(',');
