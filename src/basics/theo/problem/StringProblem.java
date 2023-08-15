@@ -1,9 +1,9 @@
-package basics.problem;
+package basics.theo.problem;
 
 public class StringProblem {
     /**
      * We are going to build research skills along with some good String methods that you should know.
-     * The basics.problem is that we are going to take a full name and split it into two pieces firstName and lastName.
+     * The basics.shawn.problem is that we are going to take a full name and split it into two pieces firstName and lastName.
      * Once you've split it, we'll just reprint out the name, and you should be able to get the same output.
      *
      * Problem Breakdown:
@@ -31,18 +31,5 @@ public class StringProblem {
 
     public static void runStringProblem(){
         //TODO: Write code here
-        String fullName = "Kokomi A Sangonomiya";
-        //Mr/Mrs or Jr or Sr, names with a - ex:Jung Heo-Seok
-
-        int indexOfSeperation = fullName.indexOf(' ');
-        int indexOfSeperation2 = fullName.indexOf('A');
-
-        String firstName = fullName.substring(0, indexOfSeperation);
-        String middleName = fullName.substring(indexOfSeperation + 1 , indexOfSeperation2);
-        String lastName = fullName.substring(indexOfSeperation2 + 1);
-        System.out.println(firstName);
-        System.out.println(middleName);
-        System.out.println(lastName);
-
     }
 }
